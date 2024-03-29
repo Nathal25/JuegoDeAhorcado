@@ -37,10 +37,10 @@
             </Button>
          </children>
       </HBox>
-      <AnchorPane prefHeight="410.0" prefWidth="333.0" style="-fx-background-color: violet;" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+      <AnchorPane fx:id="anchorPaneHangMan" prefHeight="410.0" prefWidth="333.0" style="-fx-background-color: violet;" GridPane.rowIndex="1" GridPane.rowSpan="2" />
       <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
          <center>
-            <AnchorPane prefHeight="235.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="anchorPaneWord" prefHeight="235.0" prefWidth="299.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="btnM" alignment="CENTER" layoutX="68.0" layoutY="139.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="M">
                      <font>

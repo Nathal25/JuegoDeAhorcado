@@ -3,10 +3,16 @@ package org.example.juegodeahorcado.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import org.example.juegodeahorcado.model.Player;
 import org.example.juegodeahorcado.view.alert.AlertBox;
 
 public class GameController {
+    @FXML
+    private AnchorPane anchorPaneHangMan;
+
+    @FXML
+    private AnchorPane anchorPaneWord;
     @FXML
     private Button btnA;
 
