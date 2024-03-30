@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="Botones agregados a la interfaz y ID's agregados">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Labels.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" afterDir="false" />
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/GameStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/GameStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Labels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Labels.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711743620678</updated>
-      <workItem from="1711743621889" duration="14727000" />
+      <workItem from="1711743621889" duration="15240000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -103,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711752831155</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso">
+      <option name="closed" value="true" />
+      <created>1711763334359</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711763334359</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +119,7 @@
     <MESSAGE value="Cambios minimos" />
     <MESSAGE value="Botones agregados a la interfaz" />
     <MESSAGE value="Botones agregados a la interfaz y ID's agregados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Botones agregados a la interfaz y ID's agregados" />
+    <MESSAGE value="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso" />
+    <option name="LAST_COMMIT_MESSAGE" value="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso" />
   </component>
 </project>

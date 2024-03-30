@@ -19,85 +19,7 @@ public class GameController {
     private AnchorPane anchorPaneWord;
 
     @FXML
-    private Button btnA;
-
-    @FXML
-    private Button btnB;
-
-    @FXML
-    private Button btnC;
-
-    @FXML
-    private Button btnD;
-
-    @FXML
-    private Button btnE;
-
-    @FXML
-    private Button btnF;
-
-    @FXML
-    private Button btnG;
-
-    @FXML
-    private Button btnH;
-
-    @FXML
-    private Button btnI;
-
-    @FXML
-    private Button btnJ;
-
-    @FXML
-    private Button btnK;
-
-    @FXML
-    private Button btnL;
-
-    @FXML
-    private Button btnM;
-
-    @FXML
-    private Button btnN;
-
-    @FXML
-    private Button btnNI;
-
-    @FXML
-    private Button btnO;
-
-    @FXML
-    private Button btnP;
-
-    @FXML
-    private Button btnQ;
-
-    @FXML
-    private Button btnR;
-
-    @FXML
-    private Button btnS;
-
-    @FXML
-    private Button btnT;
-
-    @FXML
-    private Button btnU;
-
-    @FXML
-    private Button btnV;
-
-    @FXML
-    private Button btnW;
-
-    @FXML
-    private Button btnX;
-
-    @FXML
-    private Button btnY;
-
-    @FXML
-    private Button btnZ;
+    private Label hintsUsed;
 
     @FXML
     private Label labelTries;
@@ -115,6 +37,7 @@ public class GameController {
         label.maxWidth(20);
         label.maxHeight(20);
         label.prefHeight(20);
+        label.setLineSpacing(2);
         label.setStyle("-fx-border-color: black;");
         anchorPaneWord.getChildren().add(label);
     }

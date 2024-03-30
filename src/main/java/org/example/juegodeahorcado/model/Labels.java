@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 public class Labels {
     private Label label;
     public Labels(){
-        label=new Label("");
+        label=new Label("    ");
     }
 
     public Label getLabel() {
