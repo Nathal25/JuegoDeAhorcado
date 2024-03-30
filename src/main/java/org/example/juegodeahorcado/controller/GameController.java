@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
+import javafx.scene.layout.HBox;
+import org.example.juegodeahorcado.model.Box;
 import org.example.juegodeahorcado.model.Player;
 import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.view.alert.AlertBox;
@@ -31,16 +33,26 @@ public class GameController {
     @FXML
     private TextField textFieldLetter;
 
+    private HBox hBox;
+    private Box box;
+
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
         String letraIngresada= textFieldLetter.getText();
         System.out.println("La letra ingresada fue: "+letraIngresada);
        textFieldLetter.setText("");
+       secretWord=new SecretWord(letraIngresada,this.player);
+//       String resultado= String.valueOf(secretWord.getResultado());
 
     }
 
     public void initialize(){
+        /*
+        box=new Box();
+        hBox=box.gethBox();
+        anchorPaneWord.getChildren().add(hBox);
 
+         */
     }
 
 

@@ -11,15 +11,13 @@ public class Player {
     public int getId(){
         return id;
     }
-
-    public String getSecretWord() {
-        return secretWord;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
 
+    public String getSecretWord() {
+        return secretWord;
+    }
     public void setSecretWord(String secretWord) {
         this.secretWord = secretWord;
     }
