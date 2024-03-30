@@ -5,7 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.example.juegodeahorcado.controller.GameController;
-import org.example.juegodeahorcado.model.Labels;
+
 
 import java.io.IOException;
 

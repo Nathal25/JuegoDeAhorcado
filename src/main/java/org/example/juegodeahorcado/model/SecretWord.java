@@ -10,10 +10,10 @@ public class SecretWord {
         System.out.println(letra);
 
         if(palabraSecreta.contains(letra)){
-            resultado=1;
+            resultado=0;
             System.out.println("Positivo");
         }else {
-            resultado=2;
+            resultado=1;
             System.out.println("Negativo");
         }
 

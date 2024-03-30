@@ -4,6 +4,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -41,294 +42,24 @@
       <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
          <center>
             <AnchorPane fx:id="anchorPaneWord" prefHeight="235.0" prefWidth="299.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button alignment="CENTER" layoutX="31.0" layoutY="144.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="M">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="74.0" layoutY="144.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="N">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="118.0" layoutY="144.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="Ñ">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="161.0" layoutY="144.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="O">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="204.0" layoutY="144.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="P">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="248.0" layoutY="144.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="Q">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="31.0" layoutY="72.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="A">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="117.0" layoutY="216.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="Z">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="74.0" layoutY="72.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="B">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="118.0" layoutY="72.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="C">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="161.0" layoutY="72.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="D">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="204.0" layoutY="72.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="E">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="248.0" layoutY="72.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="F">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="31.0" layoutY="108.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="G">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="74.0" layoutY="108.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="H">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="118.0" layoutY="108.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="I">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="161.0" layoutY="108.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="J">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="204.0" layoutY="108.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="K">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="248.0" layoutY="108.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="L">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="31.0" layoutY="180.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="R">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="74.0" layoutY="180.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="S">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="118.0" layoutY="180.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="T">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="161.0" layoutY="180.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="U">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="204.0" layoutY="180.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="V">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="248.0" layoutY="180.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="W">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="31.0" layoutY="216.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="X">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-                  <Button alignment="CENTER" layoutX="74.0" layoutY="216.0" mnemonicParsing="false" onAction="#onHandleButtonClic" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: lightblue; -fx-border-radius: 5; -fx-border-color: black; -fx-background-radius: 5;" text="Y">
-                     <font>
-                        <Font name="Roboto" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                  </Button>
-               </children>
                <BorderPane.margin>
                   <Insets top="10.0" />
                </BorderPane.margin>
+               <children>
+                  <Label layoutX="46.0" layoutY="210.0" text="INGRESE UNA LETRA DEL ABECEDARIO" />
+                  <TextField fx:id="textFieldLetter" alignment="CENTER" layoutX="114.0" layoutY="132.0" onAction="#onHandleTextFieldLetter" prefHeight="65.0" prefWidth="73.0" style="-fx-border-color: lightblue; -fx-border-radius: 10; -fx-background-color: lightblue; -fx-background-radius: 10;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font name="Roboto" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
             </AnchorPane>
          </center>
          <top>
-            <Pane prefHeight="43.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="37.0" prefWidth="299.0" BorderPane.alignment="CENTER">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="13.0" text="¡ADIVINA LA PALABRA!">
                      <font>

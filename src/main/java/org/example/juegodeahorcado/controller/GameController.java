@@ -2,11 +2,11 @@ package org.example.juegodeahorcado.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
-import org.example.juegodeahorcado.model.Labels;
+
 import org.example.juegodeahorcado.model.Player;
 import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.view.alert.AlertBox;
@@ -27,30 +27,23 @@ public class GameController {
     private SecretWord secretWord;
 
     private Player player;
-    private Labels labels;
-    private Label label;
-
-    public void initialize(){
-        labels=new Labels();
-        label=labels.getLabel();
-        label.prefWidth(20);
-        label.maxWidth(20);
-        label.maxHeight(20);
-        label.prefHeight(20);
-        label.setLineSpacing(2);
-        label.setStyle("-fx-border-color: black;");
-        anchorPaneWord.getChildren().add(label);
-    }
-
 
     @FXML
-    void onHandleButtonClic(ActionEvent event) {
+    private TextField textFieldLetter;
 
-        Button botonPresionado = (Button) event.getTarget();
-        String textoBoton = botonPresionado.getText();
-        secretWord= new SecretWord(textoBoton.toLowerCase(), player);
-        Integer result= secretWord.getResultado();
+    @FXML
+    void onHandleTextFieldLetter(ActionEvent event) {
+        String letraIngresada= textFieldLetter.getText();
+        System.out.println("La letra ingresada fue: "+letraIngresada);
+       textFieldLetter.setText("");
+
     }
+
+    public void initialize(){
+
+    }
+
+
     @FXML
     void onHandleButtonHelp(ActionEvent event) {
         String tittle="Tutorial";
