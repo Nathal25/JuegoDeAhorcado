@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.example.juegodeahorcado.controller.GameController;
+import org.example.juegodeahorcado.model.Labels;
 
 import java.io.IOException;
 
@@ -15,8 +16,9 @@ public class GameStage extends Stage {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/org/example/juegodeahorcado/game-view.fxml"));
         Parent root = loader.load();
         gameController=loader.getController();
-        setTitle("CrapsGame");
+        setTitle("Ahorcado");
         Scene scene=new Scene(root);
+        setResizable(false);
         setScene(scene);
         show();
     }
