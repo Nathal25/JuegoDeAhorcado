@@ -35,6 +35,12 @@
                <font>
                   <Font name="Roboto Medium" size="16.0" />
                </font>
+               <padding>
+                  <Insets bottom="2.0" left="3.0" right="3.0" top="2.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </HBox>
@@ -80,9 +86,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER_RIGHT" text="Intentos:">
+                  <Label alignment="CENTER_RIGHT" text="Intentos Restantes:">
                      <padding>
-                        <Insets left="95.0" />
+                        <Insets left="40.0" />
                      </padding>
                   </Label>
                   <Label alignment="CENTER_RIGHT" text="Pistas usadas:" GridPane.rowIndex="1">

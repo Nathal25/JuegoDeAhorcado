@@ -38,21 +38,25 @@ public class GameController {
 
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
+        Label label;
         String letraIngresada= textFieldLetter.getText();
-        System.out.println("La letra ingresada fue: "+letraIngresada);
-       textFieldLetter.setText("");
-       secretWord=new SecretWord(letraIngresada,this.player);
-//       String resultado= String.valueOf(secretWord.getResultado());
 
+
+        textFieldLetter.setText("");
+        secretWord=new SecretWord(letraIngresada,this.player);
+        String resultado= String.valueOf(secretWord.getResultado());
+        System.out.println(resultado);
+        secretWord.getIntentosFallidos();
+        labelTries.setText(String.valueOf(secretWord.getIntentosFallidos()));
     }
 
     public void initialize(){
-        /*
-        box=new Box();
-        hBox=box.gethBox();
+        hBox=new HBox();
+        Label label1=new Label("Hola ");
+        Label label2=new Label("mundo");
+        hBox.getChildren().addAll(label1, label2);
         anchorPaneWord.getChildren().add(hBox);
 
-         */
     }
 
 
@@ -60,9 +64,7 @@ public class GameController {
     void onHandleButtonHelp(ActionEvent event) {
         String tittle="Tutorial";
         String header ="Tutorial";
-        String content ="El juego de ahorcado consiste de lo siguiente: " +
-                "Haz de adivinar una palabra secreta, para ello podrás ver los guiones " +
-                "correspondientes a la cantidad de letras que tiene la palabra. E";
+        String content ="Aguapanela con limon";
         AlertBox alertBox=new AlertBox();
         alertBox.showMessage(tittle,header,content);
     }

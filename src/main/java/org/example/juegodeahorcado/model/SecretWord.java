@@ -6,15 +6,22 @@ public class SecretWord {
 
     private Integer resultado;
 
+    private Integer intentosFallidos;
+
     public SecretWord(String letra, Player player){
         String palabraSecreta= player.getSecretWord();
         System.out.println(letra);
 
-        if(palabraSecreta.contains(letra)){
-            resultado=0;
+        intentosFallidos = 6;
+
+        // Verificar si la letra está en la palabra secreta
+        if (palabraSecreta.contains(letra)) {
+            resultado = 0;
             System.out.println("Positivo");
-        }else {
-            resultado=1;
+        } else {
+            // Si la letra no está en la palabra secreta, disminuir intentosFallidos
+            intentosFallidos--;
+            resultado = 1;
             System.out.println("Negativo");
         }
 
@@ -26,5 +33,9 @@ public class SecretWord {
 
     public void setResultado(Integer resultado) {
         this.resultado = resultado;
+    }
+
+    public Integer getIntentosFallidos() {
+        return intentosFallidos;
     }
 }

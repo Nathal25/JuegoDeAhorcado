@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Box.java" afterDir="false" />
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="Cambios respecto a la interfaz, aun reconoce las letras si estan o no en la palabra, pero aun no está el elemento donde se muestran">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1711743620678</updated>
       <workItem from="1711743621889" duration="15297000" />
-      <workItem from="1711767911038" duration="2653000" />
+      <workItem from="1711767911038" duration="2995000" />
+      <workItem from="1711830430344" duration="5885000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -127,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711767847351</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cambios respecto a la interfaz, aun reconoce las letras si estan o no en la palabra, pero aun no está el elemento donde se muestran">
+      <option name="closed" value="true" />
+      <created>1711770669160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711770669160</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +148,7 @@
     <MESSAGE value="Botones agregados a la interfaz" />
     <MESSAGE value="Botones agregados a la interfaz y ID's agregados" />
     <MESSAGE value="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso" />
-    <option name="LAST_COMMIT_MESSAGE" value="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso" />
+    <MESSAGE value="Cambios respecto a la interfaz, aun reconoce las letras si estan o no en la palabra, pero aun no está el elemento donde se muestran" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios respecto a la interfaz, aun reconoce las letras si estan o no en la palabra, pero aun no está el elemento donde se muestran" />
   </component>
 </project>
