@@ -26,6 +26,8 @@ public class GameController {
 
     @FXML
     private Label hintsUsed;
+    @FXML
+    private Label textBase1;
 
     @FXML
     private Label labelTries;
@@ -41,33 +43,35 @@ public class GameController {
 
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
-            String letraIngresada = textFieldLetter.getText();
-            textFieldLetter.setText("");
-            analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
-            Integer resultado = (analizeLetter.getResultado());
-            //0 positivo , 1 negativo
-            if (resultado==0){
-                for(int i=0;i<secretWord.getArraySecretWord().length;i++){
-                    String verificarSeccion = secretWord.getArraySecretWord()[i];
 
-                    // Verifica si la sección actual contiene la letra ingresada
-                    if (verificarSeccion.contains(letraIngresada)) {
-                        System.out.println("La sección " + i + " contiene la letra " + letraIngresada);
-                        TextField textField = (TextField) hBoxLetters.getChildren().get(i);
-                        // Establecer el texto de este TextField con la letra ingresada
-                        textField.setText(letraIngresada);
-                    }
+        String letraIngresada = textFieldLetter.getText();
+        textFieldLetter.setText("");
+        analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
+        Integer resultado = (analizeLetter.getResultado());
+
+        if (resultado==0){
+            for(int i=0;i<secretWord.getArraySecretWord().length;i++){
+                String verificarSeccion = secretWord.getArraySecretWord()[i];
+                // Verifica si la sección actual contiene la letra ingresada
+                if (verificarSeccion.contains(letraIngresada)) {
+                    System.out.println("La sección " + i + " contiene la letra " + letraIngresada);
+                    TextField textField = (TextField) hBoxLetters.getChildren().get(i);
+                    textField.setText(letraIngresada);
                 }
             }
+        }
     }
 
     @FXML
-    void onHandleButtonStartGame(ActionEvent event2) {
+    void onHandleButtonStartGame(ActionEvent event) {
         for (int i = 0; i < secretWord.getSecretWord().length(); i++) {
-            txtLetras=new TextField();
+            txtLetras = new TextField();
             txtLetras.setEditable(false);
             hBoxLetters.getChildren().add(txtLetras);
         }
+        textFieldLetter.setVisible(true); // Hacer textFieldLetter visible cuando startGameBtn se presiona
+        textBase1.setVisible(true);
+        secretWord.setControlShow(true);
         startGameBtn.setVisible(false);
     }
 

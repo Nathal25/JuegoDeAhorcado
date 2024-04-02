@@ -52,8 +52,8 @@
                   <Insets top="10.0" />
                </BorderPane.margin>
                <children>
-                  <Label layoutX="46.0" layoutY="210.0" text="INGRESE UNA LETRA DEL ABECEDARIO" />
-                  <TextField fx:id="textFieldLetter" alignment="CENTER" layoutX="114.0" layoutY="132.0" onAction="#onHandleTextFieldLetter" prefHeight="65.0" prefWidth="73.0" style="-fx-border-color: lightblue; -fx-border-radius: 10; -fx-background-color: lightblue; -fx-background-radius: 10;">
+                  <Label fx:id="textBase1" visible="false" layoutX="46.0" layoutY="210.0" text="INGRESA UNA LETRA DEL ABECEDARIO" />
+                  <TextField fx:id="textFieldLetter" alignment="CENTER" layoutX="114.0" layoutY="132.0" onAction="#onHandleTextFieldLetter" prefHeight="65.0" prefWidth="73.0" style="-fx-border-color: lightblue; -fx-border-radius: 10; -fx-background-color: lightblue; -fx-background-radius: 10;" visible="false">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
@@ -62,7 +62,7 @@
                      </font>
                   </TextField>
                   <HBox fx:id="hBoxLetters" layoutX="13.0" layoutY="22.0" prefHeight="85.0" prefWidth="276.0" />
-                  <Button fx:id="startGameBtn" layoutX="98.0" layoutY="83.0" mnemonicParsing="false" onAction="#onHandleButtonStartGame" text="COMENZAR JUEGO" />
+                  <Button fx:id="startGameBtn" layoutX="99.0" layoutY="132.0" mnemonicParsing="false" onAction="#onHandleButtonStartGame" text="COMENZAR JUEGO" />
                </children>
             </AnchorPane>
          </center>

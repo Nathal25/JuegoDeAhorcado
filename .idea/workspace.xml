@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="Los intentos restantes no funcionan del todo :(">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" afterDir="false" />
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Box.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
     </list>
@@ -85,7 +82,7 @@
       <workItem from="1711743621889" duration="15297000" />
       <workItem from="1711767911038" duration="2995000" />
       <workItem from="1711830430344" duration="6518000" />
-      <workItem from="1712029055122" duration="9905000" />
+      <workItem from="1712029055122" duration="15305000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -151,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711836381000</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta">
+      <option name="closed" value="true" />
+      <created>1712075457736</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712075457736</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +170,7 @@
     <MESSAGE value="identifica si la letra seleccionada está en la palabra, aun no aparecen los espacios de las letras de la palabra secreta, pero estoy en eso" />
     <MESSAGE value="Cambios respecto a la interfaz, aun reconoce las letras si estan o no en la palabra, pero aun no está el elemento donde se muestran" />
     <MESSAGE value="Los intentos restantes no funcionan del todo :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="Los intentos restantes no funcionan del todo :(" />
+    <MESSAGE value="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta" />
+    <option name="LAST_COMMIT_MESSAGE" value="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta" />
   </component>
 </project>
