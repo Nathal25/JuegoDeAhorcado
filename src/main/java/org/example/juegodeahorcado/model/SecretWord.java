@@ -1,41 +1,26 @@
 package org.example.juegodeahorcado.model;
 
-import org.example.juegodeahorcado.model.Player;
-
 public class SecretWord {
+    private String secretWord;
+    private String[] arraySecretWord;
 
-    private Integer resultado;
-
-    private Integer intentosFallidos;
-
-    public SecretWord(String letra, Player player){
-        String palabraSecreta= player.getSecretWord();
-        System.out.println(letra);
-
-        intentosFallidos = 6;
-
-        // Verificar si la letra está en la palabra secreta
-        if (palabraSecreta.contains(letra)) {
-            resultado = 0;
-            System.out.println("Positivo");
-        } else {
-            // Si la letra no está en la palabra secreta, disminuir intentosFallidos
-            intentosFallidos--;
-            resultado = 1;
-            System.out.println("Negativo");
-        }
-
+    public SecretWord(String secretWord){
+        this.secretWord=secretWord;
+        this.arraySecretWord=secretWord.split("");
     }
 
-    public Integer getResultado() {
-        return resultado;
+    public String[] getArraySecretWord() {
+        return arraySecretWord;
     }
 
-    public void setResultado(Integer resultado) {
-        this.resultado = resultado;
+    public void setArraySecretWord(String[] arraySecretWord) {
+        this.arraySecretWord = arraySecretWord;
     }
 
-    public Integer getIntentosFallidos() {
-        return intentosFallidos;
+    public String getSecretWord() {
+        return secretWord;
+    }
+    public void setSecretWord(String secretWord) {
+        this.secretWord = secretWord;
     }
 }

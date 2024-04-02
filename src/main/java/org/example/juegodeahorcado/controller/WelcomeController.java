@@ -5,21 +5,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import org.example.juegodeahorcado.view.alert.AlertBox;
 import org.example.juegodeahorcado.view.GameStage;
-import org.example.juegodeahorcado.model.Player;
+import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.view.WelcomeStage;
 
 import java.io.IOException;
 
 public class WelcomeController {
-    private Player player;
+    SecretWord secretWord;
+
     @FXML
     private TextField textFieldSecretWord;
 
     @FXML
     void onHandleButtonPlay(ActionEvent event) throws IOException {
-        String secretWord = textFieldSecretWord.getText();
-        Player player=new Player(1,secretWord);
-        GameStage.getInstance().getGameController().setPlayer(player);
+        String palabraSecreta = textFieldSecretWord.getText();
+        secretWord =new SecretWord(palabraSecreta);
+        GameStage.getInstance().getGameController().setSecretWord(secretWord);
         WelcomeStage.deleteInstance();
     }
     @FXML
@@ -31,8 +32,8 @@ public class WelcomeController {
         alertBox.showMessage(tittle,header,content);
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setSecretWord(SecretWord secretWord) {
+        this.secretWord = secretWord;
     }
 }
 

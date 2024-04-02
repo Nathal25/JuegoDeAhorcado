@@ -3,19 +3,23 @@ package org.example.juegodeahorcado.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.layout.HBox;
-import org.example.juegodeahorcado.model.Box;
-import org.example.juegodeahorcado.model.Player;
 import org.example.juegodeahorcado.model.SecretWord;
+import org.example.juegodeahorcado.model.AnalizeLetter;
 import org.example.juegodeahorcado.view.alert.AlertBox;
 
 public class GameController {
     @FXML
     private AnchorPane anchorPaneHangMan;
+    @FXML
+    private Button startGameBtn;
+    @FXML
+    private HBox hBoxLetters;
 
     @FXML
     private AnchorPane anchorPaneWord;
@@ -26,39 +30,46 @@ public class GameController {
     @FXML
     private Label labelTries;
 
-    private SecretWord secretWord;
+    private AnalizeLetter analizeLetter;
 
-    private Player player;
+    private SecretWord secretWord;
 
     @FXML
     private TextField textFieldLetter;
+    private TextField txtLetras;
 
-    private HBox hBox;
-    private Box box;
 
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
-        Label label;
-        String letraIngresada= textFieldLetter.getText();
+            String letraIngresada = textFieldLetter.getText();
+            textFieldLetter.setText("");
+            analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
+            Integer resultado = (analizeLetter.getResultado());
+            //0 positivo , 1 negativo
+            if (resultado==0){
+                for(int i=0;i<secretWord.getArraySecretWord().length;i++){
+                    String verificarSeccion = secretWord.getArraySecretWord()[i];
 
-
-        textFieldLetter.setText("");
-        secretWord=new SecretWord(letraIngresada,this.player);
-        String resultado= String.valueOf(secretWord.getResultado());
-        System.out.println(resultado);
-        secretWord.getIntentosFallidos();
-        labelTries.setText(String.valueOf(secretWord.getIntentosFallidos()));
+                    // Verifica si la sección actual contiene la letra ingresada
+                    if (verificarSeccion.contains(letraIngresada)) {
+                        System.out.println("La sección " + i + " contiene la letra " + letraIngresada);
+                        TextField textField = (TextField) hBoxLetters.getChildren().get(i);
+                        // Establecer el texto de este TextField con la letra ingresada
+                        textField.setText(letraIngresada);
+                    }
+                }
+            }
     }
 
-    public void initialize(){
-        hBox=new HBox();
-        Label label1=new Label("Hola ");
-        Label label2=new Label("mundo");
-        hBox.getChildren().addAll(label1, label2);
-        anchorPaneWord.getChildren().add(hBox);
-
+    @FXML
+    void onHandleButtonStartGame(ActionEvent event2) {
+        for (int i = 0; i < secretWord.getSecretWord().length(); i++) {
+            txtLetras=new TextField();
+            txtLetras.setEditable(false);
+            hBoxLetters.getChildren().add(txtLetras);
+        }
+        startGameBtn.setVisible(false);
     }
-
 
     @FXML
     void onHandleButtonHelp(ActionEvent event) {
@@ -69,8 +80,8 @@ public class GameController {
         alertBox.showMessage(tittle,header,content);
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setSecretWord(SecretWord secretWord) {
+        this.secretWord = secretWord;
     }
 }
 
