@@ -3,14 +3,17 @@ package org.example.juegodeahorcado.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.layout.HBox;
 import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.model.AnalizeLetter;
+import org.example.juegodeahorcado.model.Winner;
 import org.example.juegodeahorcado.view.alert.AlertBox;
 
 import java.util.List;
@@ -45,17 +48,16 @@ public class GameController {
     private TextField txtLetras;
 
     private List<String> listaControl;
-
+    private Winner winner;
 
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
+
 
         String letraIngresada = textFieldLetter.getText().toLowerCase();
 
         textFieldLetter.setText("");
         analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
-        listaControl=secretWord.getCopiaArray();
-
 
         if(analizeLetter.getResultado()==0){
             for(int i=0;i<secretWord.getArraySecretWord().length;i++){
@@ -79,6 +81,16 @@ public class GameController {
             }
             secretWord.setCopiaArray(listaControl);
         }
+        if (listaControl.isEmpty()){
+            winner=new Winner();
+            hBoxLetters.setVisible(false);
+            textFieldLetter.setVisible(false);
+            Label ganador=new Label("Felicidades! Has ganado el juego");
+            ganador.setAlignment(Pos.CENTER);
+            ganador.setPrefWidth(anchorPaneWord.getWidth());
+            ImageView imagenGanador=winner.getImageView();
+            anchorPaneWord.getChildren().addAll(ganador,imagenGanador);
+        }
         System.out.println("La lista control es: "+listaControl);
     }
 
@@ -95,6 +107,7 @@ public class GameController {
         secretWord.setControlShow(true);
         hintBtn.setVisible(true);
         startGameBtn.setVisible(false);
+        listaControl=secretWord.getCopiaArray();
     }
 
     @FXML
@@ -114,7 +127,7 @@ public class GameController {
         Integer pistaAleatoria= (int)(Math.random() * listaSize);
         String tittle="Pista";
         String header ="Pista";
-        String content ="Hola, jugadora. \n Una de las letras de la palabra es " + listaControl.get(pistaAleatoria);
+        String content ="Hola, jugadora. \nUna de las letras de la palabra es " + listaControl.get(pistaAleatoria)+".";
         AlertBox alertBox=new AlertBox();
         alertBox.showMessageHint(tittle,header,content);
     }
