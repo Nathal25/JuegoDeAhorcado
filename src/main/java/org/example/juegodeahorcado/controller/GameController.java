@@ -72,7 +72,6 @@ public class GameController {
         }
         textFieldLetter.setVisible(true); // Hacer textFieldLetter visible cuando startGameBtn se presiona
         textBase1.setVisible(true);
-        textBase1.setAlignment(Pos.CENTER);
         secretWord.setControlShow(true);
         startGameBtn.setVisible(false);
     }

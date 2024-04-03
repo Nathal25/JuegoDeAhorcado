@@ -4,9 +4,11 @@ public class AnalizeLetter {
     private Integer resultado;
     private Integer intentosFallidos;
 
+
     public AnalizeLetter(String letra, SecretWord secretWord){
         String palabraSecreta= secretWord.getSecretWord();
         System.out.println(letra);
+
 
         // Verificar si la letra está en la palabra secreta
         if (palabraSecreta.contains(letra)) {
