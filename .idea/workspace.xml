@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/AlertBoxRuler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/IAlertBoxRuler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/LogoHowPlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/LogoRuler.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/WelcomeStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/WelcomeStage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/welcome-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/welcome-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,13 +30,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -55,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/natis/IdeaProjects/JuegoDeAhorcado - copia",
+    "last_opened_file_path": "C:/Users/CAMILO/IdeaProjects/JuegoDeAhorcado/src/main/resources/org/example/juegodeahorcado",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,8 +64,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\CAMILO\IdeaProjects\JuegoDeAhorcado\src\main\resources\org\example\juegodeahorcado" />
       <recent name="C:\Users\natis\IdeaProjects\JuegoDeAhorcado\src\main\resources\org\example\juegodeahorcado" />
       <recent name="C:\Users\natis\IdeaProjects\JuegoDeAhorcado\src\main\java\org\example\juegodeahorcado" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.juegodeahorcado.view.alert" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -82,6 +84,7 @@
       <workItem from="1711767911038" duration="2995000" />
       <workItem from="1711830430344" duration="6518000" />
       <workItem from="1712029055122" duration="20803000" />
+      <workItem from="1712108813715" duration="2574000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
