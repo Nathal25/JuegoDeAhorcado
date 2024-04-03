@@ -52,7 +52,7 @@
                   <Insets top="10.0" />
                </BorderPane.margin>
                <children>
-                  <Label fx:id="textBase1" visible="false" layoutX="46.0" layoutY="210.0" text="INGRESA UNA LETRA DEL ABECEDARIO" />
+                  <Label fx:id="textBase1" layoutY="210.0" text="INGRESA UNA LETRA DEL ABECEDARIO" visible="false" />
                   <TextField fx:id="textFieldLetter" alignment="CENTER" layoutX="114.0" layoutY="132.0" onAction="#onHandleTextFieldLetter" prefHeight="65.0" prefWidth="73.0" style="-fx-border-color: lightblue; -fx-border-radius: 10; -fx-background-color: lightblue; -fx-background-radius: 10;" visible="false">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
