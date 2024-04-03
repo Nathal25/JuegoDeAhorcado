@@ -1,8 +1,12 @@
 package org.example.juegodeahorcado.model;
 
+import javafx.scene.control.TextField;
+
 public class AnalizeLetter {
     private Integer resultado;
     private Integer intentosFallidos;
+
+
 
 
     public AnalizeLetter(String letra, SecretWord secretWord){

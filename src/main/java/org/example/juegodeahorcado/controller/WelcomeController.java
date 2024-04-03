@@ -65,7 +65,10 @@ public class WelcomeController {
     void onHandleButtonRuler(ActionEvent event){
         String tittle="Reglas del juego";
         String header ="Reglas";
-        String content = "Bienvenida,\nLa regla de este juego son las siguientes:\n - deberas ingresar una palabra sin numeros y sin simbolos \n - Debes ingresar la palabra con caracteres mayor a 5 y menor a 10 \n - No se puede dejar la entrada donde se escribe vacia";
+        String content = "Bienvenida,\nLa regla de este juego son las siguientes:\n - deberas" +
+                " ingresar una palabra sin numeros y sin simbolos \n - Debes ingresar" +
+                " la palabra con caracteres mayor a 5 y menor a 10 \n - No se puede " +
+                "dejar la entrada donde se escribe vacia";
         AlertBoxRuler alertBox=new AlertBoxRuler();
         alertBox.showMessage(tittle,header,content);
 

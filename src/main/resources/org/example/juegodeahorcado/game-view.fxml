@@ -42,6 +42,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
+            <Button fx:id="hintBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onHandleButtonGiveHint" prefHeight="28.0" prefWidth="44.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" text="Pista" visible="false" />
             </children>
         </HBox>
         <AnchorPane fx:id="anchorPaneHangMan" prefHeight="410.0" prefWidth="333.0" style="-fx-background-color: violet;" GridPane.rowIndex="1" GridPane.rowSpan="2" />

@@ -14,6 +14,10 @@ import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.model.AnalizeLetter;
 import org.example.juegodeahorcado.view.alert.AlertBox;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class GameController {
     @FXML
     private AnchorPane anchorPaneHangMan;
@@ -39,18 +43,21 @@ public class GameController {
 
     @FXML
     private TextField textFieldLetter;
+    @FXML
+    private Button hintBtn;
     private TextField txtLetras;
 
 
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
 
-        String letraIngresada = textFieldLetter.getText();
+        String letraIngresada = textFieldLetter.getText().toLowerCase();
         textFieldLetter.setText("");
         analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
-        Integer resultado = (analizeLetter.getResultado());
 
-        if (resultado==0){
+
+
+        if(analizeLetter.getResultado()==0){
             for(int i=0;i<secretWord.getArraySecretWord().length;i++){
                 String verificarSeccion = secretWord.getArraySecretWord()[i];
                 // Verifica si la sección actual contiene la letra ingresada
@@ -61,7 +68,9 @@ public class GameController {
                 }
             }
         }
+
     }
+
 
     @FXML
     void onHandleButtonStartGame(ActionEvent event) {
@@ -73,6 +82,7 @@ public class GameController {
         textFieldLetter.setVisible(true); // Hacer textFieldLetter visible cuando startGameBtn se presiona
         textBase1.setVisible(true);
         secretWord.setControlShow(true);
+        hintBtn.setVisible(true);
         startGameBtn.setVisible(false);
     }
 
@@ -80,9 +90,15 @@ public class GameController {
     void onHandleButtonHelp(ActionEvent event) {
         String tittle="Tutorial";
         String header ="Tutorial";
-        String content ="Aguapanela con limon";
+        String content ="Bienvenida,\nJugarás de la siguiente manera:" +
+                "\nPara descubrir cuál es la palabra secreta deberás ingresar una letra del abecedario en la casilla. De esta manera, si escribes una letra que está contenida en la palabra secreta, podrás descubrirla poco a poco. Sin embargo, debes tener en cuenta que solo puedes equivocarte un máximo de 6 veces, si gastas estas oportunidades y no has descubierto la palabra secreta, perderás el juego y el hombre será ahorcado. Para ayudarte a ganar el juego te hemos dispuesto de tres pistas como máximo, una vez el juego sea iniciado da clic en el botón junto a este y obtendrás una de las letras contenida en la palabra secreta." +
+                "\n Recuerda que no puedes dejar el campo de texto vacio y que no puedes agregar más de una letra a la vez.";
         AlertBox alertBox=new AlertBox();
         alertBox.showMessage(tittle,header,content);
+    }
+    @FXML
+    void onHandleButtonGiveHint(ActionEvent event) {
+
     }
 
     public void setSecretWord(SecretWord secretWord) {
