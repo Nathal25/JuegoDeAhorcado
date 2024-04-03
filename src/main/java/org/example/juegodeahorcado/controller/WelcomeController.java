@@ -2,18 +2,14 @@ package org.example.juegodeahorcado.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.view.GameStage;
 import org.example.juegodeahorcado.view.WelcomeStage;
 import org.example.juegodeahorcado.view.alert.AlertBox;
-import org.example.juegodeahorcado.view.alert.AlertBoxRuler;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
 
 public class WelcomeController {
     private SecretWord secretWord;
@@ -69,8 +65,8 @@ public class WelcomeController {
                 " ingresar una palabra sin numeros y sin simbolos \n - Debes ingresar" +
                 " la palabra con caracteres mayor a 5 y menor a 10 \n - No se puede " +
                 "dejar la entrada donde se escribe vacia";
-        AlertBoxRuler alertBox=new AlertBoxRuler();
-        alertBox.showMessage(tittle,header,content);
+        AlertBox alertBox=new AlertBox();
+        alertBox.showMessageRuler(tittle,header,content);
 
     }
 

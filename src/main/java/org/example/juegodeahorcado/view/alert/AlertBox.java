@@ -10,8 +10,26 @@ public class AlertBox implements IAlertBox{
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
+        alert.showAndWait();
+    }
+    @Override
+    public void showMessageHint(String title, String header, String content){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.setGraphic(new ImageView(String.valueOf(getClass().getResource("/org/example/juegodeahorcado/image/hintImage.png"))));
+        alert.showAndWait();
+    }
+    @Override
+    public void showMessageRuler(String title, String header, String content){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
         alert.setGraphic(new ImageView(String.valueOf(getClass().getResource("/org/example/juegodeahorcado/image/LogoRuler.png"))));
         alert.showAndWait();
+
     }
 
 }

@@ -3,6 +3,7 @@ package org.example.juegodeahorcado.view;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.example.juegodeahorcado.controller.GameController;
 
@@ -18,6 +19,7 @@ public class GameStage extends Stage {
         gameController=loader.getController();
         setTitle("Ahorcado");
         Scene scene=new Scene(root);
+        getIcons().add(new Image(String.valueOf(getClass().getResource("/org/example/juegodeahorcado/image/favicon.png"))));
         setResizable(false);
         setScene(scene);
         show();

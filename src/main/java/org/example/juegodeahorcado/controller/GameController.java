@@ -3,7 +3,6 @@ package org.example.juegodeahorcado.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -14,8 +13,6 @@ import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.model.AnalizeLetter;
 import org.example.juegodeahorcado.view.alert.AlertBox;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class GameController {
@@ -47,14 +44,17 @@ public class GameController {
     private Button hintBtn;
     private TextField txtLetras;
 
+    private List<String> listaControl;
+
 
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
 
         String letraIngresada = textFieldLetter.getText().toLowerCase();
+
         textFieldLetter.setText("");
         analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
-
+        listaControl=secretWord.getCopiaArray();
 
 
         if(analizeLetter.getResultado()==0){
@@ -62,13 +62,24 @@ public class GameController {
                 String verificarSeccion = secretWord.getArraySecretWord()[i];
                 // Verifica si la sección actual contiene la letra ingresada
                 if (verificarSeccion.contains(letraIngresada)) {
-                    System.out.println("La sección " + i + " contiene la letra " + letraIngresada);
+//                    System.out.println("La sección " + i + " contiene la letra " + letraIngresada);
                     TextField textField = (TextField) hBoxLetters.getChildren().get(i);
                     textField.setText(letraIngresada);
                 }
             }
+            int index = 0;
+            while (index < listaControl.size()) {
+                String charValidador = listaControl.get(index);
+                if (charValidador.contains(letraIngresada)) {
+                    System.out.println("El elemento eliminado fue: " + charValidador);
+                    listaControl.remove(index);
+                } else {
+                    index++;
+                }
+            }
+            secretWord.setCopiaArray(listaControl);
         }
-
+        System.out.println("La lista control es: "+listaControl);
     }
 
 
@@ -94,11 +105,18 @@ public class GameController {
                 "\nPara descubrir cuál es la palabra secreta deberás ingresar una letra del abecedario en la casilla. De esta manera, si escribes una letra que está contenida en la palabra secreta, podrás descubrirla poco a poco. Sin embargo, debes tener en cuenta que solo puedes equivocarte un máximo de 6 veces, si gastas estas oportunidades y no has descubierto la palabra secreta, perderás el juego y el hombre será ahorcado. Para ayudarte a ganar el juego te hemos dispuesto de tres pistas como máximo, una vez el juego sea iniciado da clic en el botón junto a este y obtendrás una de las letras contenida en la palabra secreta." +
                 "\n Recuerda que no puedes dejar el campo de texto vacio y que no puedes agregar más de una letra a la vez.";
         AlertBox alertBox=new AlertBox();
-        alertBox.showMessage(tittle,header,content);
+        alertBox.showMessageRuler(tittle,header,content);
     }
     @FXML
     void onHandleButtonGiveHint(ActionEvent event) {
-
+        Integer numPistas=0;
+        Integer listaSize=listaControl.size();
+        Integer pistaAleatoria= (int)(Math.random() * listaSize);
+        String tittle="Pista";
+        String header ="Pista";
+        String content ="Hola, jugadora. \n Una de las letras de la palabra es " + listaControl.get(pistaAleatoria);
+        AlertBox alertBox=new AlertBox();
+        alertBox.showMessageHint(tittle,header,content);
     }
 
     public void setSecretWord(SecretWord secretWord) {

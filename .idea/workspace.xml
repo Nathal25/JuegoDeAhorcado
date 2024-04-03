@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/AlertBoxHint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/IAlertBoxHint.java" afterDir="false" />
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="cambios añadidos al boton de (?) del gameStage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/WelcomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/GameStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/GameStage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/AlertBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/AlertBoxHint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/AlertBoxRuler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/IAlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/IAlertBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/IAlertBoxHint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/view/alert/IAlertBoxRuler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/welcome-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/welcome-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/natis/IdeaProjects/JuegoDeAhorcado - copia&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/natis/Downloads/ahorcadofinal - copia/ahorcadofinal - copia",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\natis\IdeaProjects\JuegoDeAhorcado\src\main\resources\org\example\juegodeahorcado" />
@@ -88,7 +91,7 @@
       <workItem from="1711767911038" duration="2995000" />
       <workItem from="1711830430344" duration="6518000" />
       <workItem from="1712029055122" duration="20803000" />
-      <workItem from="1712155309827" duration="9061000" />
+      <workItem from="1712155309827" duration="14727000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -194,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712104557863</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="cambios añadidos al boton de (?) del gameStage">
+      <option name="closed" value="true" />
+      <created>1712164468567</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712164468567</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +221,7 @@
     <MESSAGE value="Los intentos restantes no funcionan del todo :(" />
     <MESSAGE value="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta" />
     <MESSAGE value="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego" />
-    <option name="LAST_COMMIT_MESSAGE" value="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego" />
+    <MESSAGE value="cambios añadidos al boton de (?) del gameStage" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios añadidos al boton de (?) del gameStage" />
   </component>
 </project>

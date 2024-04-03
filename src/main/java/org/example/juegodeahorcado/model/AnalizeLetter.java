@@ -7,8 +7,6 @@ public class AnalizeLetter {
     private Integer intentosFallidos;
 
 
-
-
     public AnalizeLetter(String letra, SecretWord secretWord){
         String palabraSecreta= secretWord.getSecretWord();
         System.out.println(letra);
@@ -17,11 +15,11 @@ public class AnalizeLetter {
         // Verificar si la letra está en la palabra secreta
         if (palabraSecreta.contains(letra)) {
             resultado = 0;
-            System.out.println("Positivo");
+//            System.out.println("Positivo");
         } else {
             // Si la letra no está en la palabra secreta, disminuir intentosFallidos
             resultado = 1;
-            System.out.println("Negativo");
+//            System.out.println("Negativo");
         }
     }
 
