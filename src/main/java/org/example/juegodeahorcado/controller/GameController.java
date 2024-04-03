@@ -3,6 +3,7 @@ package org.example.juegodeahorcado.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -71,6 +72,7 @@ public class GameController {
         }
         textFieldLetter.setVisible(true); // Hacer textFieldLetter visible cuando startGameBtn se presiona
         textBase1.setVisible(true);
+        textBase1.setAlignment(Pos.CENTER);
         secretWord.setControlShow(true);
         startGameBtn.setVisible(false);
     }
@@ -88,5 +90,3 @@ public class GameController {
         this.secretWord = secretWord;
     }
 }
-
-

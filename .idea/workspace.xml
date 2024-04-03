@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego" />
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/natis/Downloads/JuegoDeAhorcado-main",
+    "last_opened_file_path": "C:/Users/natis/IdeaProjects/JuegoDeAhorcado - copia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,7 +80,7 @@
       <workItem from="1711743621889" duration="15297000" />
       <workItem from="1711767911038" duration="2995000" />
       <workItem from="1711830430344" duration="6518000" />
-      <workItem from="1712029055122" duration="17090000" />
+      <workItem from="1712029055122" duration="18570000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -166,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712102798498</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego">
+      <option name="closed" value="true" />
+      <created>1712103146797</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712103146797</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
