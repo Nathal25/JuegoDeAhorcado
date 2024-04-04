@@ -34,6 +34,9 @@ public class GameController {
     @FXML
     private Label textBase1;
 
+    @FXML
+    private Label labelTries;
+
     private AnalizeLetter analizeLetter;
 
     private SecretWord secretWord;
@@ -42,18 +45,16 @@ public class GameController {
     private TextField textFieldLetter;
     @FXML
     private Button hintBtn;
+    @FXML
+    private ImageView imgViewAhorcado;
     private TextField txtLetras;
 
     private List<String> listaControl;
     private Winner winner;
 
     @FXML
-    private Label labelTries;
-
-
-
-    @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
+
         String letraIngresada = textFieldLetter.getText().toLowerCase();
         textFieldLetter.setText("");
 
@@ -61,8 +62,11 @@ public class GameController {
         if (!secretWord.getWord().contains(letraIngresada)) {
             // Incrementar el contador de errores
             secretWord.incrementErrorCount();
+            labelTries.setText(String.valueOf(secretWord.getErrorCount()));
+            System.out.println(secretWord.getErrorCount());
             if (secretWord.getErrorCount() >= 6) {
                 // Mostrar mensaje de límite de errores
+                textFieldLetter.setVisible(false);
                 System.out.println("Has alcanzado el límite de errores. ¡Perdiste!");
                 return; // Salir del método si se alcanza el límite de errores
             }
@@ -72,11 +76,12 @@ public class GameController {
 
         analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
 
-        if (analizeLetter.getResultado() == 0) {
-            for (int i = 0; i < secretWord.getArraySecretWord().length; i++) {
+        if(analizeLetter.getResultado()==0){
+            for(int i=0;i<secretWord.getArraySecretWord().length;i++){
                 String verificarSeccion = secretWord.getArraySecretWord()[i];
                 // Verifica si la sección actual contiene la letra ingresada
                 if (verificarSeccion.contains(letraIngresada)) {
+//                    System.out.println("La sección " + i + " contiene la letra " + letraIngresada);
                     TextField textField = (TextField) hBoxLetters.getChildren().get(i);
                     textField.setText(letraIngresada);
                 }
@@ -93,17 +98,19 @@ public class GameController {
             }
             secretWord.setCopiaArray(listaControl);
         }
-        if (listaControl.isEmpty()) {
-            winner = new Winner();
+        if (listaControl.isEmpty()){
+            winner=new Winner();
             hBoxLetters.setVisible(false);
             textFieldLetter.setVisible(false);
-            Label ganador = new Label("Felicidades! Has ganado el juego");
+            textBase1.setVisible(false);
+            hintBtn.setVisible(false);
+            Label ganador=new Label("Felicidades! Has ganado el juego");
             ganador.setAlignment(Pos.CENTER);
             ganador.setPrefWidth(anchorPaneWord.getWidth());
-            ImageView imagenGanador = winner.getImageView();
-            anchorPaneWord.getChildren().addAll(ganador, imagenGanador);
+            ImageView imagenGanador=winner.getImageView();
+            anchorPaneWord.getChildren().addAll(ganador,imagenGanador);
         }
-        System.out.println("La lista control es: " + listaControl);
+        System.out.println("La lista control es: "+listaControl);
     }
 
 

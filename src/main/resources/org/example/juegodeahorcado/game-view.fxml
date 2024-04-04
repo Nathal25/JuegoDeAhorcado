@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -42,10 +43,16 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-            <Button fx:id="hintBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onHandleButtonGiveHint" prefHeight="28.0" prefWidth="44.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" text="Pista" visible="false" />
+            <Button fx:id="hintBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onHandleButtonGiveHint" prefHeight="28.0" prefWidth="44.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" text="Pista" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             </children>
         </HBox>
-        <AnchorPane fx:id="anchorPaneHangMan" prefHeight="410.0" prefWidth="333.0" style="-fx-background-color: violet;" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+        <AnchorPane fx:id="anchorPaneHangMan" prefHeight="410.0" prefWidth="333.0" style="-fx-background-color: violet;" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <children>
+            <ImageView fx:id="imgViewAhorcado" fitHeight="371.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
             <center>
                 <AnchorPane fx:id="anchorPaneWord" prefHeight="235.0" prefWidth="299.0" BorderPane.alignment="CENTER">
@@ -79,7 +86,7 @@
                 </Pane>
             </top>
             <bottom>
-                <GridPane alignment="CENTER_RIGHT" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
+                <GridPane alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="278.0" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
