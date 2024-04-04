@@ -23,7 +23,7 @@
     <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <VBox alignment="CENTER" prefHeight="457.0" prefWidth="310.0" style="-fx-background-color: FAB697; -fx-border-color: FA9B76; -fx-background-image: url('https://as2.ftcdn.net/v2/jpg/03/67/72/85/1000_F_367728539_h2lXZnn84QUCkTcsmA2Oe2diHd1Z2a8Z.jpg');" GridPane.columnIndex="1" GridPane.rowSpan="3">
+      <VBox alignment="CENTER" prefHeight="457.0" prefWidth="310.0" style="-fx-background-color: FAB697; -fx-border-color: FA9B76; -fx-background-image: url('https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg');" GridPane.columnIndex="1" GridPane.rowSpan="3">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="183.0" text="Ingresa la palabra secreta!">
                <VBox.margin>
@@ -49,12 +49,12 @@
       </VBox>
       <AnchorPane prefHeight="400.0" prefWidth="354.0" style="-fx-background-image: url('https://as2.ftcdn.net/v2/jpg/03/66/09/29/1000_F_366092956_haQFFCp2uParQcSIBmwCs2ji8ReyzW1W.jpg');" GridPane.rowSpan="3">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="140.0" text="BIENVENIDO" textFill="#f9ffed">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="104.0" text="BIENVENIDO" textFill="#f9ffed">
                <font>
-                  <Font name="System Bold" size="45.0" />
+                  <Font name="Ink Free" size="45.0" />
                </font>
             </Label>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="321.0" mnemonicParsing="false" onAction="#onHandleButtonHowToPlay" prefHeight="40.0" prefWidth="98.0" style="-fx-border-radius: 22; -fx-background-color: white; -fx-background-radius: 22; -fx-border-color: FA7D44; -fx-border-width: 3;" text="¿Cómo jugar?" textAlignment="CENTER" textFill="#fa7d44">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="321.0" mnemonicParsing="false" onAction="#onHandleButtonHowToPlay" prefHeight="40.0" prefWidth="98.0" style="-fx-border-radius: 22; -fx-background-color: white; -fx-background-radius: 22; -fx-border-color: FA7D44; -fx-border-width: 2px;" text="¿Cómo jugar?" textAlignment="CENTER" textFill="#fa7d44">
                <font>
                   <Font name="Javanese Text" size="14.0" />
                </font>
@@ -75,7 +75,7 @@
                <padding>
                   <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                </padding></Button>
-            <Button alignment="CENTER" layoutX="120.0" layoutY="274.0" mnemonicParsing="false" onAction="#onHandleButtonRuler" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: white; -fx-background-radius: 22; -fx-border-radius: 22; -fx-border-color: fa7d44; -fx-border-width: 3;" text="Reglas" textAlignment="CENTER" textFill="#fa7d44">
+            <Button alignment="CENTER" layoutX="120.0" layoutY="264.0" mnemonicParsing="false" onAction="#onHandleButtonRuler" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: white; -fx-background-radius: 22; -fx-border-radius: 22; -fx-border-color: fa7d44; -fx-border-width: 2px;" text="Reglas" textAlignment="CENTER" textFill="#fa7d44">
                <font>
                   <Font name="Javanese Text" size="14.0" />
                </font>
