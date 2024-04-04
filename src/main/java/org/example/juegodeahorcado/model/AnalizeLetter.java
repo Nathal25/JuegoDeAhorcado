@@ -2,6 +2,8 @@ package org.example.juegodeahorcado.model;
 
 import javafx.scene.control.TextField;
 
+import static org.example.juegodeahorcado.controller.WelcomeController.validateWord;
+
 public class AnalizeLetter {
     private Integer resultado;
     private Integer intentosFallidos;
@@ -11,13 +13,10 @@ public class AnalizeLetter {
         String palabraSecreta= secretWord.getSecretWord();
         System.out.println(letra);
 
-        if (palabraSecreta.contains(letra)) {
+        if (palabraSecreta.contains(letra)){
             resultado = 0;
-
         } else {
-
             resultado = 1;
-
         }
     }
 

@@ -15,10 +15,12 @@ import javafx.scene.layout.HBox;
 import org.example.juegodeahorcado.model.Loser;
 import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.model.AnalizeLetter;
-import org.example.juegodeahorcado.model.Winner;
+import org.example.juegodeahorcado.model.WinnerLoserImage;
 import org.example.juegodeahorcado.view.alert.AlertBox;
 
 import java.util.List;
+
+import static org.example.juegodeahorcado.controller.WelcomeController.validateWord;
 
 public class GameController {
     @FXML
@@ -55,7 +57,7 @@ public class GameController {
     private SecretWord secretWord;
     private TextField txtLetras;
     private List<String> listaControl;
-    private Winner winner;
+    private WinnerLoserImage winnerLoserImage;
     private Loser perdedor;
 
     @FXML
@@ -75,54 +77,70 @@ public class GameController {
             imgViewAhorcado.setImage(perdedor.getImagenAhorcado());
 
             if (secretWord.getErrorCount() >= 6) {
+                winnerLoserImage =new WinnerLoserImage();
                 // Mostrar mensaje de límite de errores
                 hBoxLetters.setVisible(false);
                 textFieldLetter.setVisible(false);
                 textBase1.setText("lo lamento, has perdido el juego");
+                hintBtn.setVisible(false);
                 textBase1.setLayoutX(64);
                 textBase1.setLayoutY(216);
+                ImageView imagenPerdedor=winnerLoserImage.getImageViewLoser();
+                anchorPaneWord.getChildren().add(imagenPerdedor);
                 System.out.println("Has alcanzado el límite de errores. ¡Perdiste!");
                 return; // Salir del método si se alcanza el límite de errores
             }
             System.out.println("El carácter ingresado no está en la palabra secreta. Error: " + secretWord.getErrorCount());
 
         }
-        //analizeLetter sirve para analizar la letra que fue ingresada y, además, verificar si esta pertenece o no a la palabra secreta
-        analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
+        if(letraIngresada.length()!=1 ||!validateWord(letraIngresada)){
+            textBase1.setText("Caracter invalido");
+            textBase1.setLayoutY(209);
+            textBase1.setLayoutX(107);
+        }else {
+            analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
 
-        //Esta seccion hace dos cosas: Inicialmente se encarga de verificar el resultado de la letra ingresada, o sea, si pertenece o no a la palabra
-        //secreta. De hacerlo, entonces pondrá en un hBox las letras correspondientes.
-        //Adicionalmente se creó una lista que contiene los caracteres de la palabra secreta, esta lista permite saber que letras de la palabra no han
-        //sido ingresadas, con ello, la pista que se le da al jugador solo mostrara letras que este no haya ingresado.
-        //la lista control se divide en dos partes. Una lista que se obtiene como copia directa de un array creado para la palabra secreta
-        //y otra lista como copia de la copia. de esta manera ambas listas hacen un ciclo de actualizacion mutua
-        if(analizeLetter.getResultado()==0){
-            for(int i=0;i<secretWord.getArraySecretWord().length;i++){
-                String verificarSeccion = secretWord.getArraySecretWord()[i];
-                // Verifica si la sección actual contiene la letra ingresada
-                if (verificarSeccion.contains(letraIngresada)) {
+            //Esta seccion hace dos cosas: Inicialmente se encarga de verificar el resultado de la letra ingresada, o sea, si pertenece o no a la palabra
+            //secreta. De hacerlo, entonces pondrá en un hBox las letras correspondientes.
+            //Adicionalmente se creó una lista que contiene los caracteres de la palabra secreta, esta lista permite saber que letras de la palabra no han
+            //sido ingresadas, con ello, la pista que se le da al jugador solo mostrara letras que este no haya ingresado.
+            //la lista control se divide en dos partes. Una lista que se obtiene como copia directa de un array creado para la palabra secreta
+            //y otra lista como copia de la copia. de esta manera ambas listas hacen un ciclo de actualizacion mutua
+            if(analizeLetter.getResultado()==0){
+                for(int i=0;i<secretWord.getArraySecretWord().length;i++){
+                    String verificarSeccion = secretWord.getArraySecretWord()[i];
+                    // Verifica si la sección actual contiene la letra ingresada
+                    if (verificarSeccion.contains(letraIngresada)) {
 //                    System.out.println("La sección " + i + " contiene la letra " + letraIngresada);
-                    TextField textField = (TextField) hBoxLetters.getChildren().get(i);
-                    textField.setText(letraIngresada);
+                        TextField textField = (TextField) hBoxLetters.getChildren().get(i);
+                        textField.setText(letraIngresada);
+                    }
                 }
-            }
-            int index = 0;
-            while (index < listaControl.size()) {
-                String charValidador = listaControl.get(index);
-                if (charValidador.contains(letraIngresada)) {
-                    System.out.println("El elemento eliminado fue: " + charValidador);
-                    listaControl.remove(index);
-                } else {
-                    index++;
+                int index = 0;
+                while (index < listaControl.size()) {
+                    String charValidador = listaControl.get(index);
+                    if (charValidador.contains(letraIngresada)) {
+                        System.out.println("El elemento eliminado fue: " + charValidador);
+                        listaControl.remove(index);
+                    } else {
+                        index++;
+                    }
                 }
+                secretWord.setCopiaArray(listaControl);
             }
-            secretWord.setCopiaArray(listaControl);
+            //layoutX="27.0" layoutY="205.0"
+            textBase1.setText("INGRESA UNA LETRA DEL ABECEDARIO");
+            textBase1.setLayoutY(205);
+            textBase1.setLayoutX(27);
+
         }
+        //analizeLetter sirve para analizar la letra que fue ingresada y, además, verificar si esta pertenece o no a la palabra secreta
+
 
         //Esta seccion se apoya de listaControl para verificar que el usuario ya haya ingresado todas las letras de la
         //palabra secreta, si es así aparece una imagen de un trofeo y desaparecen elementos de la interfaz
         if (listaControl.isEmpty()){
-            winner=new Winner();
+            winnerLoserImage =new WinnerLoserImage();
             hBoxLetters.setVisible(false);
             textFieldLetter.setVisible(false);
             textBase1.setVisible(false);
@@ -130,7 +148,7 @@ public class GameController {
             Label ganador=new Label("Felicidades! Has ganado el juego");
             ganador.setAlignment(Pos.CENTER);
             ganador.setPrefWidth(anchorPaneWord.getWidth());
-            ImageView imagenGanador=winner.getImageView();
+            ImageView imagenGanador= winnerLoserImage.getImageViewWinner();
             anchorPaneWord.getChildren().addAll(ganador,imagenGanador);
         }
         System.out.println("La lista control es: "+listaControl);
@@ -164,7 +182,7 @@ public class GameController {
         String header ="Tutorial";
         String content ="Bienvenida,\nJugarás de la siguiente manera:" +
                 "\nPara descubrir cuál es la palabra secreta deberás ingresar una letra del abecedario en la casilla. De esta manera, si escribes una letra que está contenida en la palabra secreta, podrás descubrirla poco a poco. Sin embargo, debes tener en cuenta que solo puedes equivocarte un máximo de 6 veces, si gastas estas oportunidades y no has descubierto la palabra secreta, perderás el juego y el hombre será ahorcado. Para ayudarte a ganar el juego te hemos dispuesto de tres pistas como máximo, una vez el juego sea iniciado da clic en el botón junto a este y obtendrás una de las letras contenida en la palabra secreta." +
-                "\n Recuerda que no puedes dejar el campo de texto vacio y que no puedes agregar más de una letra a la vez.";
+                "\n Recuerda que no puedes dejar el campo de texto vacio y que no puedes agregar más de una letra a la vez, si lo haces, se te contará como un punto perdido";
         AlertBox alertBox=new AlertBox();
         alertBox.showMessageRuler(tittle,header,content);
 
