@@ -7,10 +7,12 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.layout.HBox;
+import org.example.juegodeahorcado.model.Loser;
 import org.example.juegodeahorcado.model.SecretWord;
 import org.example.juegodeahorcado.model.AnalizeLetter;
 import org.example.juegodeahorcado.model.Winner;
@@ -47,10 +49,12 @@ public class GameController {
     private Button hintBtn;
     @FXML
     private ImageView imgViewAhorcado;
+
     private TextField txtLetras;
 
     private List<String> listaControl;
     private Winner winner;
+    private Loser perdedor;
 
     @FXML
     void onHandleTextFieldLetter(ActionEvent event) {
@@ -58,25 +62,36 @@ public class GameController {
         String letraIngresada = textFieldLetter.getText().toLowerCase();
         textFieldLetter.setText("");
 
-        // Verificar si la letra ingresada no está en la palabra secreta
+        // Verifica si la letra ingresada no está en la palabra secreta
         if (!secretWord.getWord().contains(letraIngresada)) {
-            // Incrementar el contador de errores
+            Integer cantErrores=secretWord.getErrorCount();
+            perdedor=new Loser(cantErrores);
+            // Incrementa el contador de errores
             secretWord.incrementErrorCount();
+            perdedor.setCantErrores(cantErrores);
             labelTries.setText(String.valueOf(secretWord.getErrorCount()));
-            System.out.println(secretWord.getErrorCount());
+            imgViewAhorcado.setImage(perdedor.getImagenAhorcado());
+
             if (secretWord.getErrorCount() >= 6) {
                 // Mostrar mensaje de límite de errores
+                hBoxLetters.setVisible(false);
                 textFieldLetter.setVisible(false);
+                textBase1.setText("lo lamento, pero has perdido el juego");
                 System.out.println("Has alcanzado el límite de errores. ¡Perdiste!");
                 return; // Salir del método si se alcanza el límite de errores
             }
             System.out.println("El carácter ingresado no está en la palabra secreta. Error: " + secretWord.getErrorCount());
 
         }
-        //PruebaMinimaIgnorar
-
+        //analizeLetter sirve para analizar la letra que fue ingresada y, además, verificar si esta pertenece o no a la palabra secreta
         analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
 
+        //Esta seccion hace dos cosas: Inicialmente se encarga de verificar el resultado de la letra ingresada, o sea, si pertenece o no a la palabra
+        //secreta. De hacerlo, entonces pondrá en un hBox las letras correspondientes.
+        //Adicionalmente se creó una lista que contiene los caracteres de la palabra secreta, esta lista permite saber que letras de la palabra no han
+        //sido ingresadas, con ello, la pista que se le da al jugador solo mostrara letras que este no haya ingresado.
+        //la lista control se divide en dos partes. Una lista que se obtiene como copia directa de un array creado para la palabra secreta
+        //y otra lista como copia de la copia. de esta manera ambas listas hacen un ciclo de actualizacion mutua
         if(analizeLetter.getResultado()==0){
             for(int i=0;i<secretWord.getArraySecretWord().length;i++){
                 String verificarSeccion = secretWord.getArraySecretWord()[i];
@@ -99,6 +114,9 @@ public class GameController {
             }
             secretWord.setCopiaArray(listaControl);
         }
+
+        //Esta seccion se apoya de listaControl para verificar que el usuario ya haya ingresado todas las letras de la
+        //palabra secreta, si es así aparece una imagen de un trofeo y desaparecen elementos de la interfaz
         if (listaControl.isEmpty()){
             winner=new Winner();
             hBoxLetters.setVisible(false);
@@ -128,6 +146,9 @@ public class GameController {
         hintBtn.setVisible(true);
         startGameBtn.setVisible(false);
         listaControl=secretWord.getCopiaArray();
+        imgViewAhorcado=new ImageView();
+        imgViewAhorcado.setImage(new Image(String.valueOf(getClass().getResource("/org/example/juegodeahorcado/image/ahorcado0.png"))));
+        anchorPaneHangMan.getChildren().add(imgViewAhorcado);
     }
 
     @FXML
