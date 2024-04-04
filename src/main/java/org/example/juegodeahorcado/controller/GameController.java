@@ -135,12 +135,14 @@ public class GameController {
 
     @FXML
     void onHandleButtonStartGame(ActionEvent event) {
+
         for (int i = 0; i < secretWord.getSecretWord().length(); i++) {
             txtLetras = new TextField();
             txtLetras.setEditable(false);
             hBoxLetters.getChildren().add(txtLetras);
         }
-        textFieldLetter.setVisible(true); // Hacer textFieldLetter visible cuando startGameBtn se presiona
+        // Hace textFieldLetter visible cuando startGameBtn se presiona
+        textFieldLetter.setVisible(true);
         textBase1.setVisible(true);
         secretWord.setControlShow(true);
         hintBtn.setVisible(true);
@@ -150,9 +152,10 @@ public class GameController {
         imgViewAhorcado.setImage(new Image(String.valueOf(getClass().getResource("/org/example/juegodeahorcado/image/ahorcado0.png"))));
         anchorPaneHangMan.getChildren().add(imgViewAhorcado);
     }
-
+    private Integer cantidadPistas=0;
     @FXML
     void onHandleButtonHelp(ActionEvent event) {
+
         String tittle="Tutorial";
         String header ="Tutorial";
         String content ="Bienvenida,\nJugarás de la siguiente manera:" +
@@ -160,17 +163,32 @@ public class GameController {
                 "\n Recuerda que no puedes dejar el campo de texto vacio y que no puedes agregar más de una letra a la vez.";
         AlertBox alertBox=new AlertBox();
         alertBox.showMessageRuler(tittle,header,content);
+
+
     }
     @FXML
     void onHandleButtonGiveHint(ActionEvent event) {
-        Integer numPistas=0;
-        Integer listaSize=listaControl.size();
-        Integer pistaAleatoria= (int)(Math.random() * listaSize);
-        String tittle="Pista";
-        String header ="Pista";
-        String content ="Hola, jugadora. \nUna de las letras de la palabra es " + listaControl.get(pistaAleatoria)+".";
-        AlertBox alertBox=new AlertBox();
-        alertBox.showMessageHint(tittle,header,content);
+        if(cantidadPistas<3){
+            Integer listaSize=listaControl.size();
+            Integer pistaAleatoria= (int)(Math.random() * listaSize);
+            String tittle="Pista";
+            String header ="Pista";
+            String content ="Hola, jugadora. \nUna de las letras de la palabra es " + listaControl.get(pistaAleatoria)+".";
+            AlertBox alertBox=new AlertBox();
+            alertBox.showMessageHint(tittle,header,content);
+
+            cantidadPistas++;
+            System.out.println("La cantidad de pistas dadas son: "+cantidadPistas);
+            hintsUsed.setText(String.valueOf(cantidadPistas));
+        }
+        else {
+            String tittle="Pista";
+            String header ="Pista";
+            String content ="Hola, jugadora. \nYa no puedes acceder a más pistas";
+            AlertBox alertBox=new AlertBox();
+            alertBox.showMessageHint(tittle,header,content);
+        }
+
     }
 
     public void setSecretWord(SecretWord secretWord) {
