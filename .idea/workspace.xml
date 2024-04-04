@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="el juego finaliza al acabar todos los intentos posibles. Las imagenes del ahorcado también aparecen como deben">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado6.png" afterDir="false" />
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="el ahorcado aparece de acuerdo a la cantidad de veces que se equivoca el usuario, las pistas tienen su contador funcionando correctamente y solo se dan un maximo de 3.&#10;Solo falta que el usuario no pueda ingresar numeros o espacios en el textField del GameStage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado6.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +86,7 @@
       <workItem from="1712029055122" duration="20803000" />
       <workItem from="1712155309827" duration="17908000" />
       <workItem from="1712191031073" duration="3185000" />
+      <workItem from="1712247904518" duration="2105000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -223,11 +224,30 @@
       <option name="project" value="LOCAL" />
       <updated>1712201428410</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="el ahorcado aparece de acuerdo a la cantidad de veces que se equivoca el usuario, las pistas tienen su contador funcionando correctamente y solo se dan un maximo de 3.&#10;Solo falta que el usuario no pueda ingresar numeros o espacios en el textField del GameStage">
+      <option name="closed" value="true" />
+      <created>1712203749642</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712203749642</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -243,6 +263,7 @@
     <MESSAGE value="Ya da pistas, yeeeih" />
     <MESSAGE value="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts" />
     <MESSAGE value="el juego finaliza al acabar todos los intentos posibles. Las imagenes del ahorcado también aparecen como deben" />
-    <option name="LAST_COMMIT_MESSAGE" value="el juego finaliza al acabar todos los intentos posibles. Las imagenes del ahorcado también aparecen como deben" />
+    <MESSAGE value="el ahorcado aparece de acuerdo a la cantidad de veces que se equivoca el usuario, las pistas tienen su contador funcionando correctamente y solo se dan un maximo de 3.&#10;Solo falta que el usuario no pueda ingresar numeros o espacios en el textField del GameStage" />
+    <option name="LAST_COMMIT_MESSAGE" value="el ahorcado aparece de acuerdo a la cantidad de veces que se equivoca el usuario, las pistas tienen su contador funcionando correctamente y solo se dan un maximo de 3.&#10;Solo falta que el usuario no pueda ingresar numeros o espacios en el textField del GameStage" />
   </component>
 </project>

@@ -26,19 +26,12 @@
         <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="104.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="600.0" spacing="8.0" GridPane.columnSpan="2">
+        <HBox alignment="CENTER" maxHeight="30.0" prefHeight="62.0" prefWidth="600.0" spacing="8.0" style="-fx-background-image: url('https://as2.ftcdn.net/v2/jpg/03/66/09/29/1000_F_366092956_haQFFCp2uParQcSIBmwCs2ji8ReyzW1W.jpg');" GridPane.columnSpan="2">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" text="¡A JUGAR!">
                     <font>
                         <Font name="Ink Free" size="23.0" />
                     </font></Label>
-            <Button fx:id="hintBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onHandleButtonGiveHint" prefHeight="28.0" prefWidth="44.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-style: dashed; -fx-border-width: 1.3px;" text="Pista" visible="false">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="Ink Free" size="11.0" />
-               </font></Button>
                 <Button alignment="CENTER" mnemonicParsing="false" onAction="#onHandleButtonHelp" prefHeight="21.0" prefWidth="13.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: black; -fx-border-style: dashed; -fx-border-width: 1.3px;" text="?" textAlignment="CENTER">
                     <font>
                         <Font name="Roboto Medium" size="16.0" />
@@ -50,11 +43,18 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
+            <Button fx:id="hintBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onHandleButtonGiveHint" prefHeight="28.0" prefWidth="44.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-style: dashed; -fx-border-width: 1.3px;" text="Pista" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ink Free" size="11.0" />
+               </font></Button>
             </children>
         </HBox>
-        <AnchorPane fx:id="anchorPaneHangMan" prefHeight="410.0" prefWidth="333.0" GridPane.rowIndex="1" GridPane.rowSpan="2">
+        <AnchorPane fx:id="anchorPaneHangMan" maxHeight="370.0" maxWidth="299.0" prefHeight="410.0" prefWidth="333.0" style="-fx-background-image: url('https://as2.ftcdn.net/v2/jpg/03/66/09/29/1000_F_366092956_haQFFCp2uParQcSIBmwCs2ji8ReyzW1W.jpg');" GridPane.rowIndex="1" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="imgViewAhorcado" fitHeight="371.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgViewAhorcado" fitHeight="370.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
             <center>
@@ -79,7 +79,10 @@
                         <Button fx:id="startGameBtn" layoutX="87.0" layoutY="132.0" mnemonicParsing="false" onAction="#onHandleButtonStartGame" style="-fx-background-radius: 22; -fx-border-radius: 22; -fx-border-color: black; -fx-background-color: white; -fx-border-style: dashed; -fx-border-width: 1.5px;" text="COMENZAR JUEGO">
                      <font>
                         <Font name="Ink Free" size="12.0" />
-                     </font></Button>
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                     </children>
                 </AnchorPane>
             </center>
@@ -95,7 +98,7 @@
                 </Pane>
             </top>
             <bottom>
-                <GridPane alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                <GridPane alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="278.0" style="-fx-border-style: dashed; -fx-border-width: 1.5px;" BorderPane.alignment="CENTER">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

@@ -23,8 +23,10 @@ import java.util.List;
 public class GameController {
     @FXML
     private AnchorPane anchorPaneHangMan;
+
     @FXML
     private Button startGameBtn;
+
     @FXML
     private HBox hBoxLetters;
 
@@ -33,25 +35,25 @@ public class GameController {
 
     @FXML
     private Label hintsUsed;
+
     @FXML
     private Label textBase1;
 
     @FXML
     private Label labelTries;
 
-    private AnalizeLetter analizeLetter;
-
-    private SecretWord secretWord;
-
     @FXML
     private TextField textFieldLetter;
+
     @FXML
     private Button hintBtn;
+
     @FXML
     private ImageView imgViewAhorcado;
 
+    private AnalizeLetter analizeLetter;
+    private SecretWord secretWord;
     private TextField txtLetras;
-
     private List<String> listaControl;
     private Winner winner;
     private Loser perdedor;
@@ -76,7 +78,9 @@ public class GameController {
                 // Mostrar mensaje de límite de errores
                 hBoxLetters.setVisible(false);
                 textFieldLetter.setVisible(false);
-                textBase1.setText("lo lamento, pero has perdido el juego");
+                textBase1.setText("lo lamento, has perdido el juego");
+                textBase1.setLayoutX(64);
+                textBase1.setLayoutY(216);
                 System.out.println("Has alcanzado el límite de errores. ¡Perdiste!");
                 return; // Salir del método si se alcanza el límite de errores
             }
