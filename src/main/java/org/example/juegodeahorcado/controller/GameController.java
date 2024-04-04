@@ -73,6 +73,7 @@ public class GameController {
             System.out.println("El carácter ingresado no está en la palabra secreta. Error: " + secretWord.getErrorCount());
 
         }
+        //PruebaMinimaIgnorar
 
         analizeLetter = new AnalizeLetter(letraIngresada, this.secretWord);
 
