@@ -4,17 +4,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class SecretWord {
     private boolean controlShow;
     private String secretWord;
     private String[] arraySecretWord;
     private List<String> copiaArray;
+    private int errorCount; // Nuevo campo para contar errores
 
     public SecretWord(String secretWord){
         this.secretWord=secretWord;
         this.arraySecretWord=secretWord.split("");
         //controlShow ayuda a verificar que si se presione INICIAR JUEGO antes de comenzar el juego
         this.controlShow=false;
+        this.errorCount = 0; // Inicializar el contador de errores en 0
 
         copiaArray = new ArrayList<>();
 
@@ -33,7 +40,7 @@ public class SecretWord {
         return arraySecretWord;
     }
 
-    public void setArraySecretWord() {
+    public void setArraySecretWord(String[] arraySecretWord) { // Corregido el método setArraySecretWord
         this.arraySecretWord = arraySecretWord;
     }
 
@@ -58,5 +65,18 @@ public class SecretWord {
 
     public void setCopiaArray(List<String> copiaArray) {
         this.copiaArray = copiaArray;
+    }
+
+    //Método para incrementar el contador de errores
+    public void incrementErrorCount() {
+        errorCount++;
+    }
+
+    //Método para obtener el contador de errores
+    public int getErrorCount() {
+        return errorCount;
+    }
+    public String getWord() {
+        return secretWord;
     }
 }
