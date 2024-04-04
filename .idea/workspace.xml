@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="Ya da pistas, yeeeih">
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="Se cuenta cada vez que el usuario ingresa un caracter erroneo diferente de la palabra secreta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <workItem from="1711830430344" duration="6518000" />
       <workItem from="1712029055122" duration="20803000" />
       <workItem from="1712155309827" duration="17908000" />
-      <workItem from="1712191031073" duration="3185000" />
+      <workItem from="1712191031073" duration="4067000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -200,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712181956385</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Se cuenta cada vez que el usuario ingresa un caracter erroneo diferente de la palabra secreta">
+      <option name="closed" value="true" />
+      <created>1712194858486</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712194858486</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +224,7 @@
     <MESSAGE value="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego" />
     <MESSAGE value="cambios añadidos al boton de (?) del gameStage" />
     <MESSAGE value="Ya da pistas, yeeeih" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ya da pistas, yeeeih" />
+    <MESSAGE value="Se cuenta cada vez que el usuario ingresa un caracter erroneo diferente de la palabra secreta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se cuenta cada vez que el usuario ingresa un caracter erroneo diferente de la palabra secreta" />
   </component>
 </project>
