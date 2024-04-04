@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Loser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/base ahorcado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/cabezaAhorcado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/manoDerechaAhorcado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/manoIzquierdaAhorcado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/piernaDerechaAhorcado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/piernaIzquierdaAhorcado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/torzoAhorcado.png" afterDir="false" />
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="Ya da pistas, yeeeih">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/SecretWord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +25,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -54,23 +42,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/natis/Downloads/JuegoDeAhorcado-main (1)/JuegoDeAhorcado-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/natis/Downloads/ahorcadofinal - copia/ahorcadofinal - copia&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\natis\IdeaProjects\JuegoDeAhorcado\src\main\resources\org\example\juegodeahorcado" />
@@ -89,7 +77,8 @@
       <workItem from="1711767911038" duration="2995000" />
       <workItem from="1711830430344" duration="6518000" />
       <workItem from="1712029055122" duration="20803000" />
-      <workItem from="1712155309827" duration="22797000" />
+      <workItem from="1712155309827" duration="17908000" />
+      <workItem from="1712191031073" duration="3185000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios minimos">
       <option name="closed" value="true" />
@@ -211,30 +200,11 @@
       <option name="project" value="LOCAL" />
       <updated>1712181956385</updated>
     </task>
-    <task id="LOCAL-00016" summary="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts">
-      <option name="closed" value="true" />
-      <created>1712185257538</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1712185257538</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -248,7 +218,6 @@
     <MESSAGE value="muestra los espacios correspondientes a las letras y se asignan en el espacio correspondiente si están sí estan en la palabra secreta&#10;Adicionalmente, la posibilidad de ingresar la letra solo aparecera si se presiono el boton comenzar juego" />
     <MESSAGE value="cambios añadidos al boton de (?) del gameStage" />
     <MESSAGE value="Ya da pistas, yeeeih" />
-    <MESSAGE value="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts" />
-    <option name="LAST_COMMIT_MESSAGE" value="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya da pistas, yeeeih" />
   </component>
 </project>
