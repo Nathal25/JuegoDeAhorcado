@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts">
+    <list default="true" id="40cc68bd-7105-4dfb-8943-b5d49aaf442b" name="Changes" comment="el juego finaliza al acabar todos los intentos posibles. Las imagenes del ahorcado también aparecen como deben">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/ahorcado6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Loser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/Loser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/game-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/base ahorcado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/cabezaAhorcado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/manoDerechaAhorcado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/manoIzquierdaAhorcado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/piernaDerechaAhorcado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/piernaIzquierdaAhorcado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/juegodeahorcado/image/torzoAhorcado.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/juegodeahorcado/model/AnalizeLetter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712196100730</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="el juego finaliza al acabar todos los intentos posibles. Las imagenes del ahorcado también aparecen como deben">
+      <option name="closed" value="true" />
+      <created>1712201428409</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712201428410</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +242,7 @@
     <MESSAGE value="cambios añadidos al boton de (?) del gameStage" />
     <MESSAGE value="Ya da pistas, yeeeih" />
     <MESSAGE value="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts" />
-    <option name="LAST_COMMIT_MESSAGE" value="finaliza el juego si la persona ganó, da las pistas y se optimizaron procesos respecto a los alerts" />
+    <MESSAGE value="el juego finaliza al acabar todos los intentos posibles. Las imagenes del ahorcado también aparecen como deben" />
+    <option name="LAST_COMMIT_MESSAGE" value="el juego finaliza al acabar todos los intentos posibles. Las imagenes del ahorcado también aparecen como deben" />
   </component>
 </project>
